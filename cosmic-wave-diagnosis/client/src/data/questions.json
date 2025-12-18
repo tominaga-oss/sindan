@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "text": "新しい環境や人々の中に\n飛び込むとエネルギーが\n湧いてくると感じる",
+    "dimension": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 2,
+    "text": "物事の細部よりも\n全体的なパターンや意味に\n注目する傾向がある",
+    "dimension": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 3,
+    "text": "論理的な整合性よりも\n自分の直感や感情的な\n響きを重視して決断する",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 4,
+    "text": "計画を立てて\n行動するよりも\nその場の流れや\nインスピレーションに\n任せるのが好きだ",
+    "dimension": "JP",
+    "direction": "P"
+  },
+  {
+    "id": 5,
+    "text": "一人の時間よりも\n誰かと交流している\n時間の方が元気になれる",
+    "dimension": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 6,
+    "text": "具体的な事実や\nデータよりも\n抽象的な概念や\n理論に興味がある",
+    "dimension": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 7,
+    "text": "公平さや正義よりも\n調和や他者への思いやりを\n優先することが多い",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 8,
+    "text": "締め切りギリギリまで\n粘るよりも早めに準備を\n整えて安心したい",
+    "dimension": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 9,
+    "text": "自分の内面世界に\n没頭するよりも\n外の世界の出来事に\n関心がある",
+    "dimension": "EI",
+    "direction": "E"
+  },
+  {
+    "id": 10,
+    "text": "現実的な解決策よりも\n独創的で新しいアイデアを\n考えるのが得意だ",
+    "dimension": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 11,
+    "text": "批判的な分析よりも\n相手の気持ちに寄り添った\n対応を心がけている。",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 12,
+    "text": "柔軟に対応するよりも\n決まった手順やルールに\n従う方が落ち着く",
+    "dimension": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 13,
+    "text": "大勢のパーティーよりも\n少人数での深い会話を好む",
+    "dimension": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 14,
+    "text": "過去の経験よりも\n未来の可能性について\n考えることにワクワクする",
+    "dimension": "SN",
+    "direction": "N"
+  },
+  {
+    "id": 15,
+    "text": "客観的な真実よりも\n個人の価値観や\n信念を大切にする",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 16,
+    "text": "自由な状況よりも\nある程度の枠組みや\nスケジュールがある方が\n動きやすい",
+    "dimension": "JP",
+    "direction": "J"
+  },
+  {
+    "id": 17,
+    "text": "自分の考えを\nすぐに口に出すよりも\n一度頭の中で\n整理してから話す",
+    "dimension": "EI",
+    "direction": "I"
+  },
+  {
+    "id": 18,
+    "text": "実用性よりも\n美しさや芸術的な価値に\n惹かれることが多い",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 19,
+    "text": "競争して勝つことよりも\nみんなで協力して\n何かを成し遂げることに\n喜びを感じる",
+    "dimension": "TF",
+    "direction": "F"
+  },
+  {
+    "id": 20,
+    "text": "予測不可能な事態を\n楽しむよりも\n安定した予測可能な\n環境を好む",
+    "dimension": "JP",
+    "direction": "J"
+  }
+]
