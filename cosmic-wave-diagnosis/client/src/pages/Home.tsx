@@ -2,8 +2,18 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 
+import { useEffect, useState } from "react";
+
 export default function Home() {
   const [, setLocation] = useLocation();
+  const [hasResult, setHasResult] = useState(false);
+
+  useEffect(() => {
+    const savedResult = localStorage.getItem('cosmic_diagnosis_result');
+    if (savedResult) {
+      setHasResult(true);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen w-full bg-[#050A18] text-white overflow-hidden relative flex flex-col items-center justify-center">
@@ -67,7 +77,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[url('/images/card_texture.png')] opacity-30 mix-blend-overlay"></div>
             
             <span className="relative z-10 text-xl md:text-2xl font-serif tracking-widest text-white group-hover:text-white transition-colors">
-              診断を始める
+              {hasResult ? "診断結果を見る" : "診断を始める"}
             </span>
             
             {/* Button Glow Effect */}

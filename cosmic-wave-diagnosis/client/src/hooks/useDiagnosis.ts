@@ -30,12 +30,26 @@ type Scores = {
 export const useDiagnosis = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [result, setResult] = useState<ResultType | null>(null);
+  const [result, setResult] = useState<ResultType | null>(() => {
+    // Initialize result from localStorage if available
+    const savedResult = localStorage.getItem('cosmic_diagnosis_result');
+    return savedResult ? JSON.parse(savedResult) : null;
+  });
   const [isDiagnosing, setIsDiagnosing] = useState(false);
 
   const questions = questionsData as Question[];
 
   const startDiagnosis = useCallback(() => {
+    // If result already exists, don't start new diagnosis unless explicitly reset (not implemented here)
+    // But for "prevent duplicate diagnosis", we might just redirect or show result.
+    // However, the UI might call this to restart.
+    // If we want to STRICTLY prevent, we should check here.
+    const savedResult = localStorage.getItem('cosmic_diagnosis_result');
+    if (savedResult) {
+      setResult(JSON.parse(savedResult));
+      return;
+    }
+
     setIsDiagnosing(true);
     setCurrentQuestionIndex(0);
     setAnswers({});
@@ -117,9 +131,12 @@ export const useDiagnosis = () => {
 
     if (diagnosisResult) {
       setResult(diagnosisResult);
+      localStorage.setItem('cosmic_diagnosis_result', JSON.stringify(diagnosisResult));
     } else {
       // Fallback
-      setResult((resultsData as any)['INFJ_Sun']);
+      const fallback = (resultsData as any)['INFJ_Sun'];
+      setResult(fallback);
+      localStorage.setItem('cosmic_diagnosis_result', JSON.stringify(fallback));
     }
     setIsDiagnosing(false);
   };
