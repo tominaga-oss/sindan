@@ -45,8 +45,12 @@ export default function Home() {
             波動診断
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-xl mx-auto font-light leading-relaxed">
-            あなたの魂が放つ固有の周波数を読み解き、<br className="hidden md:block" />
-            宇宙におけるあなたの役割と本質を明らかにします。
+            あなたの魂が放つ<br />
+            固有の周波数を読み解き<br />
+            <br />
+            宇宙における<br />
+            あなたの役割と本質を<br />
+            明らかにします
           </p>
         </motion.div>
 
