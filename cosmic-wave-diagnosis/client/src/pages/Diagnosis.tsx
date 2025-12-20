@@ -82,6 +82,7 @@ export default function Diagnosis() {
   
   const [location, setLocation] = useLocation();
   const [activeTab, setActiveTab] = useState("section-0");
+  const [showVideo, setShowVideo] = useState(false);
 
   // Start diagnosis on mount if not already started
   useEffect(() => {
@@ -186,20 +187,51 @@ export default function Diagnosis() {
                 その直感に従ってください
               </p>
 
-              <a 
-                href="#" // TODO: ここにYouTube動画のURLを入れてください 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block w-full"
+              <Button 
+                onClick={() => setShowVideo(true)}
+                className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:via-orange-400 hover:to-amber-400 text-white rounded-full py-8 text-lg font-serif shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all animate-pulse hover:animate-none"
               >
-                <Button 
-                  className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:via-orange-400 hover:to-amber-400 text-white rounded-full py-8 text-lg font-serif shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all animate-pulse hover:animate-none"
-                >
-                  ヒーリングを希望する
-                </Button>
-              </a>
+                ヒーリングを希望する
+              </Button>
             </motion.div>
           </div>
+
+          {/* Video Modal */}
+          <AnimatePresence>
+            {showVideo && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+                onClick={() => setShowVideo(false)}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Button
+                    onClick={() => setShowVideo(false)}
+                    className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center border border-white/20"
+                  >
+                    ✕
+                  </Button>
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/CdwtgAvrh80?autoplay=1&rel=0"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
         </div>
       </div>
